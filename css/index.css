@@ -1,0 +1,235 @@
+body {
+    min-width: 992px;
+    height: 100%;
+    color: #333;
+    font-size: 14px;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+.container-head {
+    display: flex;
+   
+}
+/* 左侧导航栏 */
+.main-left {
+    width: 220px;
+    background-color: #ccc;
+}
+
+/* 固定定位不占位置，会影响后面的盒子，所以需要给固定定位的父盒子加个宽度和高度 */
+.main-item {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 220px;
+    background-color: #ccc;
+}
+
+
+
+.music-title {
+    padding: 15px 20px;
+    color: #777;
+    font-size: 12px;
+}
+
+.main-left-two {
+    font-size: 14px;
+    width: 220px;
+
+}
+
+.main-left-two li {
+    padding-left: 20px;
+    margin: 5px 0;
+    height: 30px;
+    width: 100%;
+    line-height: 30px;
+   
+}
+.main-left-two li a {
+   display: block;
+   width: 100%;
+}
+
+.main-left-two li a span {
+    margin-left: 10px;
+}
+
+.main-left-two li:hover  {
+    background-color: aquamarine;
+}
+
+
+/* 右侧展示部分 */
+.main-right {
+    flex: 1;
+    padding:0  30px;
+    
+}
+
+/* 搜索框 */
+.mian-right-search {
+    position: relative;
+    margin-top: 20px;
+    text-align: right;
+    
+}
+
+.mian-right-search input {
+     padding: 10px 20px;
+     width: 200px;
+     border: 1px solid #ccc;
+     border-radius: 10px;
+}
+
+.mian-right-search i {
+    position: absolute;
+    right: 10px;
+    top: 7px;
+}
+
+.main-right-head h2 {
+   font-size: 30px;
+}
+
+/* 右侧导航栏 */
+.main-right-nav {
+       text-align: center;
+       height: 50px;
+       line-height: 60px;
+}
+
+.main-right-nav a {
+    position: relative;
+    margin: 0 40px;
+    
+}
+
+/* .main-right-nav a:hover {
+    color: aquamarine;
+    border-bottom: 2px solid aquamarine ;
+    padding-bottom: 10px;
+    transform: scale(0);
+    transition: all 0.5s;
+} */
+
+
+.main-right-nav a::before {
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: aquamarine;
+    transform: scale(0);
+    transition: all 0.5s;
+}
+
+.main-right-nav a:hover::before {
+  transform: scale(1);
+} 
+
+/* 轮播图 */
+.main-right-slide ul {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.main-right-slide ul li {
+    flex: 0 1 49%;
+}
+
+.main-right-slide ul img {
+     border-radius: 10px;
+     max-width: 100%;
+     height: auto;
+}
+
+.main-right-switch {
+    text-align: center;
+    
+}
+
+.main-right-switch a {
+    display: inline-block;
+    padding: 5px;
+    border-radius: 50%;
+    margin: 40px 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.main-right-switch .selected {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* 歌单推荐 */
+.main-right-hot h4{
+    margin-top: 10px;
+    height: 40px;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.main-right-hot ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-right-hot ul li  {
+    flex: 0 1 18%;
+}
+
+.main-right-hot ul li  img{
+    width: 80%;
+}
+
+/* .main-right-hot ul li .hot-play {
+    display: inline-block;
+    background: url() no-repeat ;
+    width: 100%;
+    height: 100%;
+} */
+
+/* 底部 */
+footer {
+    min-width: 992px;
+    height:80px ;
+}
+
+footer .footer_list {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+}
+
+.footer_list {
+    height: 80px;
+    background-color: #2d2d2d;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_btn a {
+    color: aliceblue;
+    margin: 0 10px;
+}
+
+.footer_btn input {
+    margin: 0 10px;
+}
+
+.footer_music {
+    margin: 0  10px ;
+    border: 0;
+    outline: none;
+}
+
